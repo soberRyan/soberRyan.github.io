@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The 12 Steps Reflections</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Example Font: Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ----------------------
+       BASIC RESETS & FONTS
+    ----------------------- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* ----------------------
+       DARK MODE STYLING
+    ----------------------- */
+    body.dark-mode {
+      background-color: #1d1d1d;
+      color: #f1f1f1;
+    }
+
+    /* ----------------------
+       HEADER
+    ----------------------- */
+    header {
+      background-color: #0077b6;
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1rem;
+      margin-bottom: 0;
+      font-weight: 300;
+    }
+
+    /* ----------------------
+       MAIN CONTENT & CONTAINER
+    ----------------------- */
+    .container {
+      width: 100%;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .intro {
+      background-color: #fff;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+    }
+
+    .intro h2 {
+      margin-bottom: 0.75rem;
+      font-size: 1.5rem;
+      color: #0077b6;
+    }
+
+    body.dark-mode .intro {
+      background-color: #2c2c2c;
+      color: #f1f1f1;
+    }
+
+    body.dark-mode .intro h2 {
+      color: #48cae4;
+    }
+
+    .intro p {
+      margin-bottom: 1rem;
+    }
+
+    /* ----------------------
+       STEP CARDS
+    ----------------------- */
+    .step {
+      background-color: #fff;
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background-color 0.3s;
+    }
+
+    .step.dark-mode {
+      background-color: #2c2c2c;
+      color: #f1f1f1;
+    }
+
+    .step h2 {
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      color: #0077b6;
+      font-weight: 700;
+    }
+
+    body.dark-mode .step h2 {
+      color: #48cae4;
+    }
+
+    .step p {
+      margin-bottom: 1rem;
+      font-weight: 300;
+    }
+
+    .step ul {
+      margin-left: 1.2rem;
+      padding-left: 1rem;
+      list-style-type: disc;
+    }
+
+    /* ----------------------
+       DARK MODE TOGGLE BUTTON
+    ----------------------- */
+    .dark-mode-toggle {
+      background-color: #0077b6;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.2rem;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      margin: 1.5rem 0;
+      transition: background-color 0.3s;
+    }
+
+    .dark-mode-toggle:hover {
+      background-color: #023e8a;
+    }
+
+    /* ----------------------
+       SCROLL TO TOP BUTTON
+    ----------------------- */
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #0077b6;
+      color: #fff;
+      border: none;
+      padding: 0.8rem;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      z-index: 100;
+    }
+
+    .scroll-top:hover {
+      background-color: #023e8a;
+    }
+
+    /* ----------------------
+       RESPONSIVE DESIGN
+    ----------------------- */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      .step h2 {
+        font-size: 1.2rem;
+      }
+
+      .intro h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+
+  <script>
+    // Toggle Dark Mode
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      const steps = document.querySelectorAll('.step');
+      steps.forEach(step => step.classList.toggle('dark-mode'));
+
+      const introSection = document.querySelector('.intro');
+      if (introSection) {
+        introSection.classList.toggle('dark-mode');
+      }
+    }
+
+    // Scroll to Top Button
+    window.addEventListener('scroll', function() {
+      const scrollButton = document.getElementById('scrollTopBtn');
+      if (window.scrollY > 300) {
+        scrollButton.style.display = 'block';
+      } else {
+        scrollButton.style.display = 'none';
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Reflections on the 12 Steps</h1>
+    <p>Experiences, challenges, and personal growth on the road to recovery</p>
+  </header>
+
+  <div class="container">
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <!-- Intro / Disclaimer Section -->
+    <div class="intro">
+      <h2>About These Reflections</h2>
+      <p>
+        This page offers an individual’s personal insights into the Twelve Steps of Alcoholics Anonymous. 
+        They aren’t official interpretations but rather experiences gathered through working the Steps 
+        and engaging in ongoing recovery. For the official text and guidance, please refer to <em>The Big Book</em> 
+        of Alcoholics Anonymous or attend your local AA meetings.
+      </p>
+      <p>
+        If you’re new to recovery, remember that everyone's journey is unique. You don’t need to believe 
+        in anything overnight. Many people come to understand these principles at their own pace. The 
+        Steps are here to guide personal growth, support, and a fresh perspective on living.
+      </p>
+    </div>
+
+    <!-- Step 1 -->
+    <div class="step">
+      <h2>Step 1</h2>
+      <p>
+        Step 1: “We admitted we were powerless over alcohol—that our lives had become unmanageable.” 
+        This Step is where we face the truth: our relationship with alcohol has taken a serious toll, 
+        and our attempts to control it haven’t worked. 
+      </p>
+      <p>
+        For me, that shift was more than just giving up on the idea of "normal drinking." It was about 
+        saying, “Yes, I'm an alcoholic, and that's okay.” By embracing that truth, I stopped living in 
+        denial and opened myself up to real change. Some people like to make lists of how alcohol made 
+        them powerless and how it wreaked havoc on their lives—whatever helps you see the reality clearly.
+      </p>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step">
+      <h2>Step 2</h2>
+      <p>
+        Step 2: “Came to believe that a Power greater than ourselves could restore us to sanity.” 
+        This can feel intimidating if you’re unsure about anything “spiritual.” The word “God” might 
+        be off-putting at first, and that’s okay. 
+      </p>
+      <p>
+        Some define God as “Group Of Drunks,” others say “Good Orderly Direction,” or simply “Love.” 
+        The key is recognizing that there's some force or collective wisdom outside your own mind 
+        that can guide you toward sanity. It could be the fellowship, nature, the universe—whatever 
+        resonates with you. Over time, I learned that I don’t have to have all the answers. Being open 
+        to help, in whatever form it comes, is a major part of this Step.
+      </p>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step">
+      <h2>Step 3</h2>
+      <p>
+        Step 3: “Made a decision to turn our will and our lives over to the care of God as we understood Him.” 
+        This Step is about letting go of that constant struggle for control. You don’t have to figure out 
+        every detail of “God” before doing this. It’s more about staying open, each day, to a better path.
+      </p>
+      <p>
+        Every morning, I try to align my will (my thoughts and actions) with something positive and loving. 
+        For me, that's God. For you, it could be a purpose or guiding principle. The real magic is in the 
+        daily practice: constantly checking in, especially when we feel ourselves pulling back into old 
+        habits or resentments.
+      </p>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="step">
+      <h2>Step 4</h2>
+      <p>
+        Step 4: “Made a searching and fearless moral inventory of ourselves.” At first, this seemed 
+        overwhelming—like I had to dig up every mistake or negative trait I’d ever shown. But writing 
+        it down actually became liberating. 
+      </p>
+      <p>
+        Many people use a simple format: resentments, fears, harms done, and the role we played. Putting 
+        it on paper helped me see patterns: how my ego, fear, or anger drove me to act out. Over time, 
+        I’ve done multiple inventories. Each time, I discover new insights and grow a bit more.
+      </p>
+    </div>
+
+    <!-- Step 5 -->
+    <div class="step">
+      <h2>Step 5</h2>
+      <p>
+        Step 5: “Admitted to God, to ourselves, and to another human being the exact nature of our wrongs.” 
+        Sharing the contents of my Step 4 with another person was nerve-racking, but it turned out to be 
+        one of the most freeing experiences I’ve ever had.
+      </p>
+      <p>
+        Telling my story out loud to a trusted sponsor let me release shame that had been weighing me down. 
+        Hearing “Me too” or “I understand” broke through my isolation. As scary as it may seem, it’s worth it.
+      </p>
+    </div>
+
+    <!-- Step 6 and 7 -->
+    <div class="step">
+      <h2>Steps 6 & 7</h2>
+      <p>
+        Step 6: “Were entirely ready to have God remove all these defects of character.” 
+        Step 7: “Humbly asked Him to remove our shortcomings.”
+      </p>
+      <p>
+        These are often grouped together because they’re closely linked. Step 6 is about being <strong>ready</strong> 
+        to let go of the traits that hurt us and others. Step 7 is where we <strong>ask</strong> for that help. 
+        It’s one thing to know our flaws; it’s another to be truly willing to change them. 
+      </p>
+      <p>
+        Sometimes, I catch myself clinging to old habits. That’s why I revisit these steps, 
+        renewing my readiness and humility. No one does it perfectly. Progress, not perfection.
+      </p>
+    </div>
+
+    <!-- Step 8 -->
+    <div class="step">
+      <h2>Step 8</h2>
+      <p>
+        Step 8: “Made a list of all persons we had harmed, and became willing to make amends to them all.”
+      </p>
+      <p>
+        This Step involves identifying the ways our behavior impacted others. It’s not about beating 
+        ourselves up—it's about recognizing reality. Many of us discover that we have more people on 
+        the list than we initially realized. Old memories pop up when we least expect them.
+      </p>
+      <p>
+        The real key here is willingness. We’re preparing to set things right, but we don’t jump in 
+        blindly. We take time to do this properly, often with guidance from a sponsor or supportive mentor.
+      </p>
+    </div>
+
+    <!-- Step 9 -->
+    <div class="step">
+      <h2>Step 9</h2>
+      <p>
+        Step 9: “Made direct amends to such people wherever possible, except when to do so would injure 
+        them or others.”
+      </p>
+      <p>
+        This Step is where the rubber meets the road. Sometimes, it’s straightforward—a simple apology 
+        and a genuine effort to repair the relationship. Other times, it’s more complicated, especially 
+        if reaching out could cause more harm. 
+      </p>
+      <p>
+        What I’ve found is that most people are kinder in response than my fears led me to believe. The 
+        relief and sense of freedom that comes from cleaning up the wreckage of our past is profound.
+      </p>
+    </div>
+
+    <!-- Step 10 -->
+    <div class="step">
+      <h2>Step 10</h2>
+      <p>
+        Step 10: “Continued to take personal inventory and when we were wrong promptly admitted it.”
+      </p>
+      <p>
+        This Step is about staying on track day by day. If I snap at someone or slip into old behaviors, 
+        I recognize it, own it, and make it right as soon as possible. I don’t wait until things pile up 
+        or resentments fester. 
+      </p>
+      <p>
+        Consistency is key. Step 10 reminds me to check in regularly—whether that's at bedtime, 
+        in a journal, or just in a quiet moment—so I can address issues before they get out of hand.
+      </p>
+    </div>
+
+    <!-- Step 11 -->
+    <div class="step">
+      <h2>Step 11</h2>
+      <p>
+        Step 11: “Sought through prayer and meditation to improve our conscious contact with God as we 
+        understood Him, praying only for knowledge of His will for us and the power to carry that out.”
+      </p>
+      <p>
+        This Step focuses on nurturing our spiritual side—however we define it. Prayer is about talking 
+        to that higher power; meditation is about listening. Personally, I find quiet mindfulness helps 
+        me stay present instead of dwelling on regrets (the past) or anxieties (the future).
+      </p>
+      <p>
+        On days I skip my practice, I notice more stress. On days I lean into it, I feel calmer and more 
+        aware of helpful nudges from my intuition. It’s a skill that grows with time and patience.
+      </p>
+    </div>
+
+    <!-- Step 12 -->
+    <div class="step">
+      <h2>Step 12</h2>
+      <p>
+        Step 12: “Having had a spiritual awakening as the result of these steps, we tried to carry this 
+        message to alcoholics, and to practice these principles in all our affairs.”
+      </p>
+      <p>
+        This Step is about giving back and continuing to grow. Sharing our experience, strength, and hope 
+        with others not only helps them, it helps us too. Service work, sponsoring newcomers, or even just 
+        listening in a meeting are all ways to practice Step 12.
+      </p>
+      <p>
+        The challenge is applying these principles in our everyday life—at home, at work, wherever we go. 
+        By keeping Step 12 in mind, we maintain a spirit of gratitude, compassion, and humility.
+      </p>
+    </div>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" class="scroll-top" onclick="scrollToTop()">&uarr;</button>
+</body>
+</html>
