@@ -1,1 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The 12 Steps Reflections</title>
+  <style>
+    /* ----------------------
+       BASIC RESETS & FONTS
+    ----------------------- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
 
+    /* ----------------------
+       DARK MODE STYLING
+    ----------------------- */
+    body.dark-mode {
+      background-color: #1d1d1d;
+      color: #f1f1f1;
+    }
+
+    /* ----------------------
+       CONTAINER & HEADER
+    ----------------------- */
+    header {
+      background-color: #0077b6;
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 0.5rem;
+      font-size: 1.8rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+
+    /* ----------------------
+       MAIN CONTENT
+    ----------------------- */
+    .container {
+      width: 100%;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .step {
+      background-color: #fff;
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background-color 0.3s;
+    }
+
+    .step.dark-mode {
+      background-color: #2c2c2c;
+      color: #f1f1f1;
+    }
+
+    .step h2 {
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      color: #0077b6;
+    }
+
+    body.dark-mode .step h2 {
+      color: #48cae4;
+    }
+
+    .step p {
+      margin-bottom: 1rem;
+    }
+
+    /* ----------------------
+       DARK MODE BUTTON
+    ----------------------- */
+    .dark-mode-toggle {
+      background-color: #0077b6;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.2rem;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      margin: 1.5rem 0;
+      transition: background-color 0.3s;
+    }
+
+    .dark-mode-toggle:hover {
+      background-color: #023e8a;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      .step h2 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+  <script>
+    function toggleDarkMode() {
+      // Toggle the 'dark-mode' class on the body
+      document.body.classList.toggle('dark-mode');
+      
+      // Also toggle it on each .step container
+      const steps = document.querySelectorAll('.step');
+      steps.forEach(step => step.classList.toggle('dark-mode'));
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Reflections on the 12 Steps</h1>
+    <p>Experiences, challenges, and personal growth</p>
+  </header>
+
+  <div class="container">
+
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <div class="step">
+      <h2>Step 1</h2>
+      <p>
+        Step 1 in AA is about admitting, deep down, that we are alcoholics. 
+        For me, that meant shifting from self-pity to an empowering realization 
+        that I <em>get</em> to be an alcoholic. Recognizing my addictive personality 
+        helped me focus my work on the remaining steps, establishing a connection 
+        with God, and letting go of long-held resentments, fears, anxieties, and 
+        depression. Some sponsors suggest making two lists—how alcohol rendered 
+        you powerless and how it made your life unmanageable—but my biggest 
+        hurdle was fully embracing that I was an alcoholic instead of forever 
+        searching for a way to drink “like a normal person.”
+      </p>
+    </div>
+
+    <div class="step">
+      <h2>Step 2</h2>
+      <p>
+        Step 2 is about coming to believe that a power greater than ourselves 
+        can restore us to sanity. At first, I didn't want to admit that 
+        alcohol, drugs, and my behavior had driven me to insanity. Nor did I 
+        embrace the notion of God, believing Him akin to Santa Claus or the 
+        Tooth Fairy. Many in recovery define God in different ways—“group of 
+        drunks,” “good orderly direction,” or otherwise. Over time, I started 
+        to see God as Love and the universal energy present in everyone and 
+        everything. I believe God speaks through people, experiences, and 
+        particularly my intuition. This viewpoint took a long time to shape, 
+        and I work continuously to nurture it.
+      </p>
+    </div>
+
+    <div class="step">
+      <h2>Step 3</h2>
+      <p>
+        Step 3 focuses on turning our will and our lives over to God as we 
+        understand Him. This was a tough step for me and one that I have to 
+        re-commit to daily. Each morning, I pray for guidance in my thoughts 
+        and actions—those being the essence of <em>my will and my life</em>. 
+        I believe God's will is for me to be the best version of myself and 
+        to help others. It's easy to slip back into “my will,” so I keep 
+        this step alive by praying, believing, and following that inner 
+        nudge toward the next right action.
+      </p>
+    </div>
+
+    <div class="step">
+      <h2>Step 4</h2>
+      <p>
+        Step 4 involves taking a searching and fearless moral inventory of 
+        ourselves. While it was easy to dwell on my flaws internally, the 
+        real relief came when I wrote them down, prayed about them, and 
+        shared them with my sponsor. I also find value in revisiting Step 4 
+        multiple times as I continue in sobriety. As more insights emerge—often 
+        when I’m helping others through their inventory—my own understanding 
+        deepens and evolves.
+      </p>
+    </div>
+
+    <div class="step">
+      <h2>Step 5</h2>
+      <p>
+        Step 5 is about admitting to God, ourselves, and another human being 
+        the exact nature of our wrongs. It usually means reading through 
+        our Step 4 inventory with a sponsor, accompanied by prayer. This kind 
+        of honesty often lifts shame and guilt that can keep us stuck in the past.
+      </p>
+    </div>
+
+    <div class="step">
+      <h2>Steps 6 and 7</h2>
+      <p>
+        Steps 6 and 7 deal with becoming entirely ready for God to remove our 
+        character defects, and then humbly asking Him to do so. They're closely 
+        connected, and it's easy to mix up their specific wording. In essence, 
+        Step 6 is about willingness, and Step 7 is about surrender—asking God 
+        for the help we need to truly let go of these defects.
+      </p>
+    </div>
+
+    <div class="step">
+      <h2>Step 8</h2>
+      <p>
+        Step 8 involves listing all the people we've harmed and becoming willing 
+        to make amends to them. Just like Step 4, my list has grown over time as 
+        I remember more incidents or recognize new ways my actions affected others. 
+        Though it might sound overwhelming, it’s primarily a preparation step— 
+        Step 9 is where the actual amends take place.
+      </p>
+    </div>
+
+    <div class="step">
+      <h2>Step 9</h2>
+      <p>
+        Step 9 is about making direct amends whenever possible, unless doing so 
+        would harm someone else. In my experience, amends I've made have always 
+        gone better than I feared and have helped restore or improve relationships. 
+        They often brought unexpected blessings and gave me a deeper understanding 
+        of both myself and the people I harmed.
+      </p>
+    </div>
+
+    <div class="step">
+      <h2>Step 10</h2>
+      <p>
+        Step 10 instructs us to continue taking personal inventory and admit 
+        when we’re wrong without delay. This involves daily checks on my resentments, 
+        fears, or situations where I might owe an amends. Regularly returning 
+        to the previous steps—and helping others work through them—keeps me 
+        accountable and aware of my growth areas.
+      </p>
+    </div>
+
+    <div class="step">
+      <h2>Step 11</h2>
+      <p>
+        Step 11 encourages prayer (talking to God) and meditation (listening to God). 
+        I don’t do this as consistently as I’d like, but I definitely notice a 
+        difference on days I start with prayer and meditation. I also view my 
+        daily thoughts as a form of prayer, so I monitor what I’m dwelling on. 
+        I like having free-flow, conversational prayers with God in my head, 
+        and I practice mindfulness by remaining present. Focusing on the past 
+        can lead to depression, while worrying about the future can trigger 
+        anxiety. Staying in the <em>now</em> keeps me more in tune with God’s presence.
+      </p>
+    </div>
+
+    <div class="step">
+      <h2>Step 12</h2>
+      <p>
+        Step 12 is about carrying the message to other alcoholics and practicing 
+        these principles in all our affairs. It’s easier to keep the principles 
+        in play during meetings or while helping another person in recovery. 
+        The real challenge is in daily life, especially when I’m alone or at home. 
+        Showing up for meetings, doing service work, and supporting newcomers 
+        keeps me active in Step 12.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
